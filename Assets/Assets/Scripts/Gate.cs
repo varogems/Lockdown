@@ -26,7 +26,7 @@ public class Gate : MonoBehaviour
 
             if (m_numberOfEnemy > (m_capacity - 1)) continue;
 
-            PoolManager.SpawnEnemy(m_typeEnemy, this.transform.position, this);
+            PoolManager.SpawnEnemy(m_typeEnemy, this.transform, this);
             m_numberOfEnemy++;
 
         }

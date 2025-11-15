@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +7,7 @@ public abstract class MovingEnemy : Enemy
 {
     [SerializeField] NavMeshAgent m_agent;
     [SerializeField] protected Animator m_animator;
+    Vector3 m_startSpawn;
 
 
     protected void Idle()
@@ -24,6 +24,7 @@ public abstract class MovingEnemy : Enemy
     public override void Reset()
     {
         base.Reset();
+        m_startSpawn = this.gameObject.transform.position;
 
         StartCoroutine(IEResetAgent());
     }
@@ -62,12 +63,50 @@ public abstract class MovingEnemy : Enemy
         m_lookatTargetScript.SetActive(false);
     }
 
+    Vector3 RandomPos()
+    {
+        return new Vector3(UnityEngine.Random.Range(4, 5), this.transform.position.y, UnityEngine.Random.Range(4, 5));
+    }
+
+    // [SerializeField] protected bool m_isWalkArround = false;
+    // Coroutine m_crtDelayIdle = null;
+
+    // void WalkArround()
+    // {
+    //     if(m_agent.enabled == false) return;
+
+    //     if(!m_isWalkArround)
+    //     {
+    //         m_crtDelayIdle = null;
+
+    //         Vector3 posDestination = RandomPos();
+    //         NavMeshHit navMeshHit;
+    //         if(m_agent.Raycast(posDestination, out navMeshHit))
+    //             m_agent.SetDestination(navMeshHit.position);
+    //         else
+    //             m_agent.SetDestination(posDestination);
+    //         m_isWalkArround = true;
+
+    //         AnimMoving();
+    //     }
+    //     if ((m_crtDelayIdle == null) && m_isWalkArround && m_agent.remainingDistance <= m_agent.stoppingDistance && m_agent.remainingDistance != 0)
+    //         m_crtDelayIdle = StartCoroutine(DelayIdle());
+
+    // }
+
+    // IEnumerator DelayIdle()
+    // {
+    //     yield return new WaitForSeconds(UnityEngine.Random.Range(1, 3));
+    //     m_isWalkArround = false;
+    // }
+
 
     void FixedUpdate()
     {
         if (!m_isActive)
         {
             Idle();
+            // WalkArround();
             return;
         }
 

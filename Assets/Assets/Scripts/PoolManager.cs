@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PoolManager : MonoBehaviour
 {
@@ -208,6 +209,31 @@ public class PoolManager : MonoBehaviour
 
 
         enemyObj.transform.position = newPos;
+        
+
+        enemyObj = null;
+    }
+
+    public static void SpawnEnemy(EnemyType enemyType, Transform transform, Gate gate)
+    {
+        GameObject enemyObj = m_listEnemyPool[(int)enemyType].Value.GetComponent<ObjectPool>().GetPooledObject();
+
+        enemyObj.GetComponent<ResetScript>()?.Reset();
+        enemyObj.GetComponent<EnemyHealth>()?.SetGate(gate);
+
+        Vector3 newPos = new Vector3(transform.position.x + UnityEngine.Random.Range(0f, 2f),
+                                    transform.position.y + UnityEngine.Random.Range(0f, 2f),
+                                    transform.position.z + UnityEngine.Random.Range(0f, 2f));
+
+
+
+
+        enemyObj.transform.position = newPos;
+
+
+        enemyObj.transform.localRotation  = Quaternion.Euler(0, 
+                                                            0, 
+                                                            0);
         
 
         enemyObj = null;
