@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b848e6565817c6c41b911ed4bb8453b2, type: 3}
+  m_Name: Default Rifle
+  m_EditorClassIdentifier: 
+  m_modelActiveWeapon: {fileID: 4001839694420407594, guid: 09ec65d18cb0afc4a93d1c6afbac2b47, type: 3}
+  m_modelPickupWeapon: {fileID: 3716784775792499287, guid: 8b5973d983734d44c92fed5177d0c86d, type: 3}
+  m_typeWeapon: 0
+  m_damage: 35
+  m_fireRate: 0.1
+  m_defaultMagazineSize: 30
+  m_defaultCapacity: 90
+  m_isAutomatic: 1
+  m_canZoom: 0
+  m_weight: 1.5
+  m_canInspect: 0
+  m_zoomInAmmount: 11
+  m_zoomOutAmmount: 60
+  m_shootSFX: {fileID: 8300000, guid: 4333f2a91c274d742b59b949a24d736c, type: 3}
+  m_reloadSFX: {fileID: 8300000, guid: c15a5b4f158776f40b28bd048777a6a0, type: 3}
+  m_delayReload: 0.7

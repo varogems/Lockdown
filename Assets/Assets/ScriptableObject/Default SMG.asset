@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b848e6565817c6c41b911ed4bb8453b2, type: 3}
+  m_Name: Default SMG
+  m_EditorClassIdentifier: 
+  m_modelActiveWeapon: {fileID: 4313761073343073642, guid: 33bda4205afb3d642bbf0898212b8530, type: 3}
+  m_modelPickupWeapon: {fileID: 2185832400827030836, guid: 10f9459348ea2044bad0856d1993ba23, type: 3}
+  m_typeWeapon: 0
+  m_damage: 25
+  m_fireRate: 0.08
+  m_defaultMagazineSize: 65
+  m_defaultCapacity: 260
+  m_isAutomatic: 1
+  m_canZoom: 0
+  m_weight: 1.5
+  m_canInspect: 0
+  m_zoomInAmmount: 11
+  m_zoomOutAmmount: 60
+  m_shootSFX: {fileID: 8300000, guid: 4333f2a91c274d742b59b949a24d736c, type: 3}
+  m_reloadSFX: {fileID: 8300000, guid: c15a5b4f158776f40b28bd048777a6a0, type: 3}
+  m_delayReload: 0.6

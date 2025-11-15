@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b848e6565817c6c41b911ed4bb8453b2, type: 3}
+  m_Name: Default Snip
+  m_EditorClassIdentifier: 
+  m_modelActiveWeapon: {fileID: 1504135484269789913, guid: cd70041b1ff02124896aeb7e650ffed1, type: 3}
+  m_modelPickupWeapon: {fileID: 4044024523376018619, guid: b783bc5b6a8e23040b6d48855722acdf, type: 3}
+  m_typeWeapon: 1
+  m_damage: 120
+  m_fireRate: 1
+  m_defaultMagazineSize: 10
+  m_defaultCapacity: 50
+  m_isAutomatic: 0
+  m_canZoom: 1
+  m_weight: 1.5
+  m_canInspect: 0
+  m_zoomInAmmount: 11
+  m_zoomOutAmmount: 60
+  m_shootSFX: {fileID: 8300000, guid: 9ac20c7f2488a1b47b35f24f94cbe75d, type: 3}
+  m_reloadSFX: {fileID: 8300000, guid: c15a5b4f158776f40b28bd048777a6a0, type: 3}
+  m_delayReload: 0.6
