@@ -221,20 +221,19 @@ public class PoolManager : MonoBehaviour
         enemyObj.GetComponent<ResetScript>()?.Reset();
         enemyObj.GetComponent<EnemyHealth>()?.SetGate(gate);
 
-        Vector3 newPos = new Vector3(transform.position.x + UnityEngine.Random.Range(0f, 2f),
-                                    transform.position.y + UnityEngine.Random.Range(0f, 2f),
-                                    transform.position.z + UnityEngine.Random.Range(0f, 2f));
+        Vector3 newPos = new Vector3(transform.position.x + UnityEngine.Random.Range(0f, 1f),
+                                    transform.position.y,
+                                    transform.position.z + UnityEngine.Random.Range(0f, 1f));
 
 
 
 
         enemyObj.transform.position = newPos;
+        // Debug.Log("--------------------------");
+        // Debug.Log(transform.rotation + " " + m_instance.transform.rotation);
 
-
-        enemyObj.transform.localRotation  = Quaternion.Euler(0, 
-                                                            0, 
-                                                            0);
-        
+        // enemyObj.transform.parent = transform;
+        // enemyObj.transform.localRotation  = Quaternion.Euler(0, 0, 0);
 
         enemyObj = null;
     }

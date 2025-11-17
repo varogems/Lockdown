@@ -27,4 +27,9 @@ public class Enemy : MonoBehaviour
         m_followTarget = null;
     }
 
+    public virtual void Dead()
+    {
+        
+    }
+
 }

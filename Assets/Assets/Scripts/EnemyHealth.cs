@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyHealth : Health
 {
+    [SerializeField] Enemy m_enemyScript;
     [SerializeField] DetectRange m_detectRange;
     [SerializeField] Animator m_animator = null;
     [SerializeField] Collider m_collider;
@@ -27,6 +29,8 @@ public class EnemyHealth : Health
         m_collider.enabled = false;
 
         m_detectRange?.Disable();
+        m_enemyScript?.Dead();
+
 
         if (m_animator != null)
             m_animator.Play("Die", 0, 0f);

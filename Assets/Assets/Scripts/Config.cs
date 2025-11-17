@@ -75,6 +75,10 @@ public class Config : MonoBehaviour
 
 
 
+    static List<Vector3> m_RelativeMovePosList;
+
+
+
 
 
 
@@ -92,6 +96,7 @@ public class Config : MonoBehaviour
         else
         {
             Init();
+            InitRelativeMovePosList();
             m_instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
@@ -157,24 +162,41 @@ public class Config : MonoBehaviour
         Debug.Log("Init Config");
     }
 
-    public static float GetRangeATKByEnemyType(EnemyType enemyType)
-    {
-        switch (enemyType)
-        {
-            case EnemyType.Robot:
-                return m_RobotRangeAtk;
-            case EnemyType.Slime:
-                return 0f;
-            case EnemyType.Turtle:
-                return 0f;
-            case EnemyType.Citizen:
-                return 0f;
-        }
+    // public static float GetRangeATKByEnemyType(EnemyType enemyType)
+    // {
+    //     switch (enemyType)
+    //     {
+    //         case EnemyType.Robot:
+    //             return m_RobotRangeAtk;
+    //         case EnemyType.Slime:
+    //             return 0f;
+    //         case EnemyType.Turtle:
+    //             return 0f;
+    //         case EnemyType.Citizen:
+    //             return 0f;
+    //     }
 
-            return 0f;
+    //         return 0f;
+    // }
+
+    void InitRelativeMovePosList()
+    {
+        m_RelativeMovePosList = new List<Vector3>();
+        m_RelativeMovePosList.Add(new Vector3(0, 0, 6));
+        m_RelativeMovePosList.Add(new Vector3(6, 0, 6));
+        m_RelativeMovePosList.Add(new Vector3(6, 0, 0));
+        m_RelativeMovePosList.Add(new Vector3(6, 0, -6));
+        m_RelativeMovePosList.Add(new Vector3(0, 0, -6));
+        m_RelativeMovePosList.Add(new Vector3(-6, 0, -6));
+        m_RelativeMovePosList.Add(new Vector3(-6, 0, 0));
+        m_RelativeMovePosList.Add(new Vector3(-6, 0, 6));
     }
 
 
+    public static Vector3 RamdomRelativePos()
+    {
+        return m_RelativeMovePosList[UnityEngine.Random.Range(0, m_RelativeMovePosList.Count)];
+    }
 
 
 

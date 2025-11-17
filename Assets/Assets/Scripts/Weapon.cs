@@ -78,7 +78,6 @@ public class Weapon : MonoBehaviour
     public void ResetCapacityAmmorSize()
     {
         m_ammorSize.m_curCapacity = m_infoWeapon.m_defaultCapacity;
-        RefreshAmmorTextGUI();
     }
 
     ///--------------------- StarterAssetsInputs -------------------------------

@@ -519,6 +519,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_maxHealth: 100
   m_healthTxtUI: {fileID: 0}
+  m_sai: {fileID: 6922819653591822785}
+  m_ingameUI: {fileID: 0}
+  m_gameOverUI: {fileID: 0}
+  m_player: {fileID: 5752237899873470010}
 --- !u!1 &7569820683181844994
 GameObject:
   m_ObjectHideFlags: 0

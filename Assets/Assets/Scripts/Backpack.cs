@@ -239,6 +239,7 @@ public class Backpack : MonoBehaviour
             if (m_listCurWeapon[i] != null)
                 m_listCurWeapon[i].GetComponent<Weapon>().ResetCapacityAmmorSize();
         }
+        m_curActiveWeapon?.GetComponent<Weapon>().RefreshAmmorTextGUI();
     }
     
 

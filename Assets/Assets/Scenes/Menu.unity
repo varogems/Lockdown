@@ -1116,7 +1116,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1032656807}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadWarmUp
+        m_MethodName: LoadCampaign
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5564,6 +5564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHealth: 100
+  m_enemyScript: {fileID: 0}
   m_detectRange: {fileID: 0}
   m_animator: {fileID: 0}
   m_collider: {fileID: 8368807788965770985}

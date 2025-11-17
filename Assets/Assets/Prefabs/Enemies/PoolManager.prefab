@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4585839233598568156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9146274860693477520}
+  - component: {fileID: 5179500313246994913}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9146274860693477520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585839233598568156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5179500313246994913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585839233598568156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c418993f99899814d965a3cded052e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transform: {fileID: 9146274860693477520}
+  m_listBullet:
+  - {fileID: 8419170231430085969, guid: 8878bf6e047f40c4c83fb1bd39c125ec, type: 3}
+  - {fileID: 1938286930087717457, guid: ede4855eeb2ecf644bcb81cc91544a2f, type: 3}
+  - {fileID: 1938286930087717457, guid: a4ea48c7602eba14a910c8d56124efbe, type: 3}
+  m_listPlayerParticle:
+  - {fileID: 7076293538300664613, guid: 046935abe01bc574ca4d93bcdd38f25b, type: 3}
+  m_listEnemyParticle:
+  - {fileID: 7076293538300664613, guid: b5ef3d619ae43f644ae2d86188547226, type: 3}
+  - {fileID: 7076293538300664613, guid: deaeb7d9e6df63548ba48a38b4a00f03, type: 3}
+  - {fileID: 7076293538300664613, guid: 3ab5e5b7b4600614884b126e8185d036, type: 3}
+  - {fileID: 7076680366346317085, guid: 573319e4b699d174e8006d33ef04f20c, type: 3}
+  m_listEnemy:
+  - {fileID: 7103658430466490436, guid: fed6035c3129c39449908ac42367cf86, type: 3}
+  - {fileID: 4457082526635711295, guid: c54c9345188ee0949adec03cbda04ceb, type: 3}
+  - {fileID: 7731734468270282358, guid: 241bc998e9d768846852af6f39f828be, type: 3}
+  - {fileID: 7789437917377804241, guid: d700a0c5f8b0114458100c46179d9e0d, type: 3}

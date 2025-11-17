@@ -451,6 +451,7 @@ MonoBehaviour:
   m_isActive: 0
   m_agent: {fileID: 5292790562911143083}
   m_animator: {fileID: 8928273115771749496}
+  m_isWalkArround: 0
   m_muzzle: {fileID: 5328881322701681404}
   m_shootingMuzzleScript: {fileID: 3431187823976407265}
   m_bulletType: 1
@@ -467,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHealth: 100
+  m_enemyScript: {fileID: 2220971008742512398}
   m_detectRange: {fileID: 2290722128054227182}
   m_animator: {fileID: 8928273115771749496}
   m_collider: {fileID: 7474553475685631503}

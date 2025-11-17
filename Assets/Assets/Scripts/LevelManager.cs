@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -15,8 +16,11 @@ public class LevelManager : MonoBehaviour
         WarmUp,
         Campaign
     }
-
-   IEnumerator loadScene(eScene scene)
+    void Awake()
+    {
+        Debug.Log("Awake");
+    }
+    IEnumerator loadScene(eScene scene)
     {
         if(m_audioSource != null) m_audioSource.PlayOneShot(m_pressAudio);
 
@@ -34,6 +38,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMenu()
     {
+        Debug.Log("LoadMenu");
         StartCoroutine(loadScene(eScene.Menu));
     }
 
@@ -44,6 +49,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadCampaign()
     {
+        Debug.Log("LoadCampaign");
         StartCoroutine(loadScene(eScene.Campaign));
     }
 
@@ -53,5 +59,15 @@ public class LevelManager : MonoBehaviour
     {
         if(m_audioSource != null) m_audioSource.PlayOneShot(m_pressAudio);
         Application.Quit();
+    }
+
+    void Update()
+    {
+        //! Escapte to menu scene.
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && (SceneManager.GetActiveScene().buildIndex != 0))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            LoadMenu();
+        }
     }
 }
